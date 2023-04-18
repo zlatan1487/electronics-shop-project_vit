@@ -16,5 +16,4 @@ if __name__ == '__main__':
     print(item2.price)  # 20000
 
     print(Item.all)  # [<src.item.Item object at 0x00000261E22DD890>, <src.item.Item object at 0x00000261E22DD310>]
-    print(type('<__main__.Item object at 0x000001EC6250C690>'))
 
