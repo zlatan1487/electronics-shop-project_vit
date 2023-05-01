@@ -40,6 +40,10 @@ class Item:
 
     def __str__(self):
         return f'{self.name}'
+
+    def __add__(self, other):
+        return self.quantity + other.quantity
+
     @classmethod
     def instantiate_from_csv(cls):
         cls.all.clear()
