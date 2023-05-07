@@ -2,12 +2,14 @@ from src.item import Item
 
 
 class MixinLanguage:
-    __slots__ = ['EN', 'RU', 'UA']
+    __slots__ = ['EN', 'RU']
 
     _language = 'EN'
 
     def change_lang(self):
-        MixinLanguage._language = self.__slots__[1]
+        current_index = self.__slots__.index(self._language)
+        next_index = (current_index + 1) % len(self.__slots__)
+        MixinLanguage._language = self.__slots__[next_index]
         return self
 
     @property
@@ -24,7 +26,6 @@ class KeyBoard(Item, MixinLanguage):
         super().__init__(name, price, quantity)
 
 
-kb = KeyBoard('Dark Project KD87A', 9600, 5)
 
 
 
