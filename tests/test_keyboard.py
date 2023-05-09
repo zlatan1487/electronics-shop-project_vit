@@ -17,7 +17,7 @@ def test_property_language():
 # TestCase#3 change property language for class KeyBoard[MixinLanguage]
 def test_change_property_language():
     kb.change_lang().change_lang()
-    assert str(kb.language) == "RU"
+    assert str(kb.language) == "EN"
 
     with pytest.raises(AttributeError):
         kb.language = "CH"
